@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #F1E8D9;
+  color: #241A14;
+}
+
+/* Signature element: a divider made of small repeating "beads", referencing
+   the coral beads (ivie) worn in Edo regalia. Used between major sections
+   instead of a plain hairline rule. */
+.bead-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.bead-divider span {
+  width: 6px;
+  height: 6px;
+  border-radius: 9999px;
+  background-color: currentColor;
+  opacity: 0.55;
+}
+
+.bead-divider span:nth-child(3n) {
+  opacity: 1;
+  width: 8px;
+  height: 8px;
+}
+
+/* Visible keyboard focus, kept consistent across the site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #D24B36;
+  outline-offset: 2px;
+}

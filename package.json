@@ -1,0 +1,29 @@
+{
+  "name": "edo-club-austin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "16.2.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "resend": "^3.4.0",
+    "framer-motion": "^11.3.8"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "@types/node": "^20.14.15",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tailwindcss": "^3.4.7",
+    "postcss": "^8.4.40",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "16.2.9"
+  }
+}
