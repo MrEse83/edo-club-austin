@@ -20,7 +20,7 @@ export function Button({
   const styles =
     variant === "primary"
       ? "bg-coral text-parchment hover:bg-coral-dark"
-      : "border border-bronze text-bronze hover:bg-bronze hover:text-parchment";
+      : "border border-parchment text-parchment hover:bg-parchment hover:text-ink";
 
   return (
     <Link href={href} className={`${base} ${styles} ${className}`}>

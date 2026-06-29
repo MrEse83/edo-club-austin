@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/content/site";
 import { BeadDivider } from "@/components/ui/BeadDivider";
 
@@ -8,16 +9,22 @@ export function Footer() {
       <div className="mx-auto max-w-content px-6 py-12 sm:px-8">
         <div className="grid gap-10 sm:grid-cols-3">
           <div>
-            <p className="font-display text-lg font-semibold">{site.name}</p>
-            <p className="mt-2 max-w-xs text-sm text-parchment/70">
-              {site.tagline}
-            </p>
+            <div className="flex items-center gap-3 mb-3">
+              <Image
+                src="/images/logo.jpg"
+                alt={site.name}
+                width={52}
+                height={52}
+                className="rounded-full brightness-0 invert opacity-90"
+              />
+              <p className="font-display text-lg font-semibold leading-tight">{site.name}</p>
+            </div>
+            <p className="text-sm text-parchment/70 italic">{site.motto}</p>
+            <p className="text-xs text-parchment/50 mt-1">{site.mottoTranslation}</p>
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-parchment/60">
-              Explore
-            </p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-parchment/60">Explore</p>
             <ul className="mt-3 space-y-2 text-sm">
               <li><Link href="/events" className="hover:text-coral">Events</Link></li>
               <li><Link href="/gallery" className="hover:text-coral">Gallery</Link></li>
@@ -26,9 +33,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-parchment/60">
-              Reach us
-            </p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-parchment/60">Reach us</p>
             <ul className="mt-3 space-y-2 text-sm text-parchment/80">
               <li>{site.contact.email}</li>
               {site.contact.phone && <li>{site.contact.phone}</li>}
@@ -40,8 +45,7 @@ export function Footer() {
         <BeadDivider className="my-8 text-parchment/40" />
 
         <p className="text-center text-xs text-parchment/50">
-          © {new Date().getFullYear()} {site.name}. Serving the Edo
-          community of Central Texas since {site.foundedYear}.
+          &copy; {new Date().getFullYear()} {site.name}. Serving the Edo community of Central Texas since {site.foundedYear}.
         </p>
       </div>
     </footer>

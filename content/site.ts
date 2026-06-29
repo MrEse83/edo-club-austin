@@ -5,7 +5,9 @@ export const site = {
   name: "Edo Club of Austin",
   shortName: "Edo Club ATX",
   tagline: "Home away from Edo.",
-  foundedYear: 1993, // placeholder — confirm exact founding year
+  motto: "Akugbe Ore Etin",
+  mottoTranslation: "Unity is strength",
+  foundedYear: 1993, // placeholder, confirm exact founding year
   city: "Austin, Texas",
 
   missionStatement:

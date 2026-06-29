@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/content/site";
 
 const links = [
@@ -17,9 +18,19 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-bronze/15 bg-parchment/95 backdrop-blur">
-      <nav className="mx-auto flex max-w-content items-center justify-between px-6 py-4 sm:px-8">
-        <Link href="/" className="font-display text-lg font-semibold text-ink">
-          {site.shortName}
+      <nav className="mx-auto flex max-w-content items-center justify-between px-6 py-3 sm:px-8">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/images/logo.jpg"
+            alt={site.name}
+            width={48}
+            height={48}
+            className="rounded-full"
+          />
+          <span className="font-display text-base font-semibold text-ink leading-tight hidden sm:block">
+            Edo Club<br />of Austin
+          </span>
         </Link>
 
         {/* Desktop links */}
